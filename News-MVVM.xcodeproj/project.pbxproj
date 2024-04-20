@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6682F6E42A8C46F312A2836E /* Pods_News_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FDF36FCC097BC09481A9A8 /* Pods_News_MVVM.framework */; };
+		870188E12BD4096E00B9BC7D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870188E02BD4096E00B9BC7D /* AppConstants.swift */; };
 		87E284A32BD40715008F57BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E284A22BD40715008F57BE /* AppDelegate.swift */; };
 		87E284A52BD40715008F57BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E284A42BD40715008F57BE /* SceneDelegate.swift */; };
 		87E284A72BD40715008F57BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E284A62BD40715008F57BE /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		6C901E894B153971F31A717E /* Pods-News-MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News-MVVM.debug.xcconfig"; path = "Target Support Files/Pods-News-MVVM/Pods-News-MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		870188E02BD4096E00B9BC7D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		87E2849F2BD40715008F57BE /* News-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E284A22BD40715008F57BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E284A42BD40715008F57BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				87E284AB2BD40716008F57BE /* Assets.xcassets */,
 				87E284AD2BD40716008F57BE /* LaunchScreen.storyboard */,
 				87E284B02BD40716008F57BE /* Info.plist */,
+				870188E02BD4096E00B9BC7D /* AppConstants.swift */,
 			);
 			path = "News-MVVM";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				87E284A72BD40715008F57BE /* ViewController.swift in Sources */,
 				87E284A32BD40715008F57BE /* AppDelegate.swift in Sources */,
 				87E284A52BD40715008F57BE /* SceneDelegate.swift in Sources */,
+				870188E12BD4096E00B9BC7D /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
