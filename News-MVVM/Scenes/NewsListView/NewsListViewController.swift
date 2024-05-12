@@ -44,6 +44,12 @@ class NewsListViewController: UIViewController, UITableViewDelegate {
             
         }.disposed(by: bag)
         
+        tableView.rx.modelSelected(Article.self).subscribe(onNext: { item in
+            //Pushing Details Screen
+            //...
+            print("SelectedItem: \(item.title ?? "")")
+                }).disposed(by: bag)
+        
 //        viewModel.reactiveArticles.subscribe(onNext: { articlesArray in
 //            self.tableView.reloadData()
 //        })
