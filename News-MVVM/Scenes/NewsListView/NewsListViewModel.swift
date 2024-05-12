@@ -6,17 +6,21 @@
 //
 
 import Foundation
+import Combine
 
 //final is related to Static & Dynamic dispatch
 final class NewsListViewModel {
     private let network: AlamofireNetworkService
     private var articles: [Article] = []
     
+    var reactiveArticlesCombine = PassthroughSubject<[Article], NSError>()
+    
     var completionClosure: (() -> ())?
     var errorClosure: ((String?) -> ())?
     
     init(network: AlamofireNetworkService = AlamofireNetworkService()) {
         self.network = network
+        fetchNews()
     }
     
     func fetchNews() {
@@ -31,6 +35,7 @@ final class NewsListViewModel {
                 
             case .success(let newsResponse):
                 self.articles = newsResponse.articles ?? []
+                self.reactiveArticlesCombine.send(newsResponse.articles ?? [])
                 DispatchQueue.main.async {
                     if let completionClosure = self.completionClosure {
                         completionClosure()
