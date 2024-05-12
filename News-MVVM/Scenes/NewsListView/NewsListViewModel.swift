@@ -6,11 +6,14 @@
 //
 
 import Foundation
+import RxSwift
 
 //final is related to Static & Dynamic dispatch
 final class NewsListViewModel {
     private let network: AlamofireNetworkService
     private var articles: [Article] = []
+    
+    var reactiveArticles = PublishSubject<[Article]>()
     
     var completionClosure: (() -> ())?
     var errorClosure: ((String?) -> ())?
@@ -31,6 +34,7 @@ final class NewsListViewModel {
                 
             case .success(let newsResponse):
                 self.articles = newsResponse.articles ?? []
+                self.reactiveArticles.onNext(newsResponse.articles ?? [])
                 DispatchQueue.main.async {
                     if let completionClosure = self.completionClosure {
                         completionClosure()
